@@ -25,7 +25,7 @@ We can *listen* for certain kinds of user-driven events, such as clicking a butt
 - What is an appropriate google search for how JavaScript events work?
 - What are some specific examples of common DOM events?
 
-> If you need some help, you can find information on events and examples [W3Schools Events](https://www.w3schools.com/js/js_events.asp), [W3Schools DOM Events](https://www.w3schools.com/js/js_htmldom_events.asp), and [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/Events).
+> You can find information on events and examples [W3Schools Events](https://www.w3schools.com/js/js_events.asp), [W3Schools DOM Events](https://www.w3schools.com/js/js_htmldom_events.asp), and [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/Events).
 
 Note: W3 schools introduces events with JavaScript written into attributes.
 We instead will prefer keeping JavaScript out of HTML files and using JS to target elements from the DOM and attach [event listeners](https://www.w3schools.com/js/js_htmldom_eventlistener.asp).
