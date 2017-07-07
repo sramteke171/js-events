@@ -18,25 +18,21 @@ The **DOM** not only lets us manipulate the document or webpage using JavaScript
 
 We can *listen* for certain kinds of user-driven events, such as clicking a button, entering data into a form, keypresses and many, many more.
 
-## You Do: What Is An Event? (10 minutes / 0:10)
+### Events (5 minutes / 0:10)
 
-> 7 minutes exercise. 3 minutes review.
+- In plain English, what is an event?
+- What might an event in the context of a web page be?
+- What is an appropriate google search for how JavaScript events work?
+- What are some specific examples of common DOM events?
 
-Spend 7 minutes doing the following tasks. You are encouraged to discuss your findings with a partner during the exercise.
+> If you need some help, you can find information on events and examples [W3Schools Events](https://www.w3schools.com/js/js_events.asp), [W3Schools DOM Events](https://www.w3schools.com/js/js_htmldom_events.asp), and [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/Events).
 
-1. Come up with your own definition without looking at any other sources. Don't worry about getting it right -- what do you think an event is?
-2. Now, find (i.e., Google) some documentation on Javascript events. Does that information match your definition? How would you update your definition to include what you have learned but rephrased in your own words?
-3. Write down three examples of events.
+Note: W3 schools introduces events with JavaScript written into attributes.
+We instead will prefer keeping JavaScript out of HTML files and using JS to target elements from the DOM and attach [event listeners](https://www.w3schools.com/js/js_htmldom_eventlistener.asp).
 
-> If you need some help, you can find information on events and examples [W3Schools](http://www.w3schools.com/js/js_events.asp) and [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/Events).
+"DOM Events are sent to notify code of interesting things that have taken place." _- MDN_
 
-When you have finished, read [this issue](https://github.com/ga-wdi-lessons/js-events-callbacks/issues/9) and submit a comment with the three parts clearly labeled.
-
-### User Interaction
-
-As we write client-side Javascript -- javascript that is executed in *the browser* -- it is very important to keep the user's actions in mind when designing our app's UI.
-
-For example, let's say we have a single button on our landing page. We need to write some code that will run whenever a user clicks on that button.
+For the time being, when we talk about "interesting things that have taken place" we are talking about user interactions with the page.
 
 ### What is Asynchronicity?
 
@@ -67,22 +63,30 @@ Interspersed throughout the lesson are examples in vanilla Javascript that are e
 
 ### We Do: Set Up
 
-For the guided portion of this lesson we'll be working with only two files: `index.html` and `script.js`. We've already created these for you and included some starter code. Clone them down using the following Terminal command...
+For the guided portion of this lesson we'll be working with only two files: `index.html` and `script.js`
 
+Create a new directory in your sandbox:
 ```bash
-$ git clone https://github.com/ga-wdi-exercises/events-callbacks-practice.git
+cd ~/wdi/sandbox
+mkdir js-events-and-callbacks
+cd js-events-and-callbacks
+touch index.html script.js
+atom .
 ```
 
-You should see this in `index.html`...
+In `index.html` add:
+- the html boiler plate,
+- a title,
+- a single button to the document `body`,
+- and link `script.js` _at the bottom of the file_ (we will return to discuss this momentarily).
+
+Your page should look like this:
 
 ```html
-<!-- index.html -->
-
 <!DOCTYPE html>
 <html>
   <head>
     <title>Events and Callbacks Practice</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
   </head>
   <body>
     <button>Click me!</button>
@@ -99,26 +103,70 @@ Now let's put a simple block of code in `script.js` to make sure it's properly l
 console.log( "The page's contents have finished loading!" );
 ```
 
-> Is this code running syncronously or asynchronously?
+Open `index.html` and check the developer console for the message.
+
+## Adding jQuery from a CDN
+
+Just as we can load an image from our local machine using a relative path or from a remote machine with a URL, we can load a JavaScript file from our local machine or from a hosting site called a CDN.
+
+- Go to [code.jquery.com/](https://code.jquery.com/) (or google jQuery cdn)
+- Click 'uncompressed' next to the most recent version
+- Copy the script tag provided and paste it into the document head
+
+Your html file should now look like this:
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events and Callbacks Practice</title>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.js"
+      integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+      crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <button>Click me!</button>
+  </body>
+  <script src="script.js"></script>
+</html>
+```
 
 ## Setting Up An Event Listener (15 minutes / 0:25)
 
-Now that we know a bit about events in JavaScript, let's wire up our code to be able to respond to those events. In order to run code in response to an event, we need to define an **event listener**. Below you'll find a simple event listener.
+Now that we have an idea of what DOM events are in theory, let's wire up our code and begin interacting with them.
+In order to associate some code with a particular event, we need to define an **event listener**. Below you'll find a simple event listener associated with a `'click'` event on the `button` element.
+
+In script.js,
+
+First we target the button:
 
 ```js
-// script.js
-
 var button = $("button")
-
-function handleClickEvent(){
-  console.log("I was clicked!")
-}
-
-// This is the event listener
-button.on("click", handleClickEvent)
 ```
 
-Let's go through the above code examples line-by-line...
+Let's reload the page and use the developer console to look at the value of `button`
+
+What happens differently when we move the script that loads `script.js` to the document head? Why is this?
+
+Now let's define a simple function that will be run when the button is clicked.
+
+```js
+
+function handleClickEvent(){
+  console.log('I was clicked!')
+}
+```
+
+And finally lets associate that function with `click` events on the `button` element.
+
+```js
+
+// This is the event listener
+button.on('click', handleClickEvent)
+```
+
+Reviewing `script.js` line-by-line...
 
 ### Selecting The Element
 
@@ -130,7 +178,7 @@ var button = $("button")
 ```
 
 <details>
-  <summary><strong>What exactly is being saved to `var button`?</strong></summary>
+  <summary><strong>What exactly is being assigned to <code>button</code>?</strong></summary>
 
   > In `$(selector)`, `selector` is a string interpreted as a [CSS-style selector](https://api.jquery.com/category/selectors/). All elements match by this selector are wrapped in a **jQuery object** letting us call more jQuery methods on the object. In the above example, the jQuery object contains the `<button>` element from our HTML.
 
@@ -147,7 +195,7 @@ var button = $("button")
 
 </details>
 
-### Defining The Behavior
+### The Callback Function
 
 When our button is clicked, we want some code to run that prints a message to the console. We are going to **encapsulate** that code in a function. This is the primary utility of a function - packaging up behavior and giving it a name so that it can be invoked at some later time.
 
@@ -157,9 +205,11 @@ function handleClickEvent(){
 }
 ```
 
-### Creating The Event Listener
+This is just a regular function. We can call it at any time in the browser console and it will behave as expected.
 
-Now for the start of the show: registering our function (encapsulated behavior) with the button to be run in the event of a "click". This is called adding an event listener.
+### Adding the Event Listener
+
+Now for the start of the show: associating our function with `'click'` events on the `button` element. This is adding an event listener.
 
 ```js
 button.on("click", handleClickEvent);
@@ -179,7 +229,7 @@ button.on("click", handleClickEvent);
 
 We call the `.on` method of the jQuery object containing the DOM element(s) to which we are applying the listener.
 
-In this case, that jQuery object is `button` and the wrapped DOM element is the `<button>`. You can see in the REPL, the variable `button` evaluates to this jQuery object and `button[0]` or `button.get(0)` returns the contained DOM object.
+In this case, that jQuery object is `button` and the wrapped DOM element is the `button` element. You can see in the REPL, the variable `button` evaluates to this jQuery object and `button[0]` or `button.get(0)` returns the contained DOM object.
 
 The description of the underlying element is for the sake of understanding. You will not likely want to go back and forth between the two.
 
@@ -220,7 +270,7 @@ A callback is a function that is passed as an argument to another function. The 
 
 > **A callback is a function that will be run at some later time.**
 
-The invocation may happen immediately, after some period of time or repeatedly. In the example above, `handleClickEvent` is our callback. The invocation happens whenever the button is clicked.
+The invocation may happen immediately or after some period of time, it may happen once, repeatedly, or never at all. In the example above, `handleClickEvent` is our callback. The invocation happens whenever the button is clicked and only if the button is clicked.
 
 > If we are only using the callback for the single event listener, we may choose to define it as a function expression inline when registering the event (also known as an anonymous function -- since we are never calling it later by name, we do not need to give it a name).
 
@@ -305,7 +355,7 @@ Refresh the page. What do you see when you click the button?
 <details>
   <summary><strong>Solution</strong></summary>
 
-  If you're curious, here's a short solution to the earlier Color Scheme Switcher exercise that makes use of `this`. Keep in mind, this is advanced! You are not expected to be able to write code like this yet.  
+  If you're curious, here's a short solution to the earlier Color Scheme Switcher exercise that makes use of `this`. Keep in mind, this is advanced! You are not expected to be able to write code like this yet.
 
   ```js
   $("li").on("click", function () {
@@ -570,9 +620,10 @@ There are several other events that come up with the `input` tag. See if you can
 ## Sample Quiz Questions
 
 1. What is the difference between synchronous and asynchronous program execution?
-2. Define a function that takes a function as an argument and invokes the argument when the function is called.
-3. What arguments does `setInterval` take?
-4. What is the difference between `setInterval` and `setTimeout`?
+2. Do `forEach`, `map`, `filter`, and friends run synchronously or asynchronously?
+3. Define a function that takes a function as an argument and invokes the argument when the function is called.
+4. What arguments does `setInterval` take?
+5. What is the difference between `setInterval` and `setTimeout`?
 
 ## Homework: [Pixart](https://github.com/ga-wdi-exercises/pixart_js)
 
