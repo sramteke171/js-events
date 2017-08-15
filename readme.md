@@ -299,11 +299,11 @@ button.on("click", handleClickEvent());
 
 > 5 minutes exercise. 5 minutes review.
 
-Visit this [repository](https://github.com/ga-wdi-exercises/event-listener-practice) and follow the instructions.
+Visit this [repository](https://git.generalassemb.ly/ga-wdi-exercises/event-listener-practice) and follow the instructions.
 
 ## Break (10 minutes / 0:50)
 
-### You Do: [Color Scheme Switcher](https://github.com/ga-dc/color-scheme-switcher) (20 minutes / 1:10)
+### You Do: [Color Scheme Switcher](https://git.generalassemb.ly/ga-wdi-exercises/color-scheme-switcher) (20 minutes / 1:10)
 
 > 15 minutes exercise. 5 minutes review.
 
@@ -346,11 +346,11 @@ Refresh the page. What do you see when you click the button?
 
 </details>
 
-### You Do: [`this` Practice](https://github.com/ga-wdi-exercises/events-this-practice) (15 minutes / 1:30)
+### You Do: [`this` Practice](https://git.generalassemb.ly/ga-wdi-exercises/events-this-practice) (15 minutes / 1:30)
 
 > 10 minutes exercise. 5 minutes review.
 
-### Bonus: [Implement `this` in Color Picker](https://github.com/ga-dc/color-scheme-switcher)
+### Bonus: [Implement `this` in Color Picker](https://git.generalassemb.ly/ga-wdi-exercises/color-scheme-switcher)
 
 <details>
   <summary><strong>Solution</strong></summary>
@@ -463,7 +463,7 @@ This risk is greatest when Javascript is making requests to other webpages. Ther
 
 In this small app we made, anything we want to be sure happens **after** those 5 seconds of computing should go inside the callback of the `setTimeout`. This way, we can be certain that it will run only after the 5 seconds are up.
 
-## You Do: [TimerJS](https://github.com/ga-wdi-exercises/timer_js) (40 minutes / 2:25)
+## You Do: [TimerJS](https://git.generalassemb.ly/ga-wdi-exercises/timer_js) (40 minutes / 2:25)
 
 > 30 minutes exercise. 10 minutes review.
 
@@ -625,7 +625,7 @@ There are several other events that come up with the `input` tag. See if you can
 4. What arguments does `setInterval` take?
 5. What is the difference between `setInterval` and `setTimeout`?
 
-## Homework: [Pixart](https://github.com/ga-wdi-exercises/pixart_js)
+## Homework: [Pixart](https://git.generalassemb.ly/ga-wdi-exercises/pixart_js)
 
 ## Screencasts
 
