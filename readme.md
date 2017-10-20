@@ -3,11 +3,14 @@
 ## Learning Objectives
 
 ### Events
+
 * Explain event-driven development
-* Understand working with events in JavaScript
-* Define what `this` represents in the context of an event listener
+* Understand the different types of events we can work with in JS
+* Setup an event listener and an event handler
+* Use the event object
 
 ### Callbacks
+
 * Explain the concept of a "callback" and how we can pass functions as arguments to other functions
 * Explain why callbacks are important to asynchronous program flow
 * Pass a named function as a callback to **another** function
@@ -153,7 +156,7 @@ This is where callbacks come in!
 We can imagine the implementation of `doWork` as looking something like this:
 
 ```js
-Function doWork( callback ) {
+function doWork( callback ) {
 
 	// code for whatever it is that takes so long ...
 	
@@ -191,6 +194,8 @@ Visit this [repository](https://git.generalassemb.ly/ga-wdi-exercises/event-list
 ## We Do: Color Scheme Switcher
  
  > We will build on the Color Scheme Switcher as we work through the following sections of the lesson.
+ 
+ Visit this [repository](https://git.generalassemb.ly/ga-wdi-exercises/color-scheme-switcher) and follow along!
 
 ## The Event Object (10 min / 1:05 )
 
@@ -262,14 +267,6 @@ One way to go about this is to
 ## We Do: DOTS: The Game (40 minutes / 2:30)
 
 Visit this [repository](https://git.generalassemb.ly/ga-wdi-exercises/event-listener-demo) and follow the instructions.
-
-## Sample Quiz Questions
-
-1. What is the difference between synchronous and asynchronous program execution?
-2. Do `forEach`, `map`, `filter`, and friends run synchronously or asynchronously?
-3. Define a function that takes a function as an argument and invokes the argument when the function is called.
-4. What arguments does `setInterval` take?
-5. What is the difference between `setInterval` and `setTimeout`?
 
 ## Homework: [Pixart](https://git.generalassemb.ly/ga-wdi-exercises/pixart_js)
 
