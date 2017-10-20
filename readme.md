@@ -271,7 +271,7 @@ Visit this [repository](https://git.generalassemb.ly/ga-wdi-exercises/event-list
 ## Homework: [Pixart](https://git.generalassemb.ly/ga-wdi-exercises/pixart_js)
 
 ## Additional Reading
-[Build a Drum Kit in Vanilla JS](https://www.youtube.com/watch?v=VuN8qwZoego)
-[Event reference](https://developer.mozilla.org/en-US/docs/Web/Events)
-[Introduction to events](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events)
-[Eloquent JavaScript: Handling Events](http://eloquentjavascript.net/14_event.html)
+- [Build a Drum Kit in Vanilla JS](https://www.youtube.com/watch?v=VuN8qwZoego)
+- [Event reference](https://developer.mozilla.org/en-US/docs/Web/Events)
+- [Introduction to events](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events)
+- [Eloquent JavaScript: Handling Events](http://eloquentjavascript.net/14_event.html)
