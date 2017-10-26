@@ -44,7 +44,7 @@ For the time being, when we talk about "interesting things that have taken place
 
 There are many events that we can listen for and respond to in JavaScript. Broadly speaking, we can divide these events in to four categories:
 
-**Document / Window Events **
+**Document / Window Events**
 
 - load
 - resize
