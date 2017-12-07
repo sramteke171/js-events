@@ -275,3 +275,5 @@ Visit this [repository](https://git.generalassemb.ly/ga-wdi-exercises/event-list
 - [Event reference](https://developer.mozilla.org/en-US/docs/Web/Events)
 - [Introduction to events](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events)
 - [Eloquent JavaScript: Handling Events](http://eloquentjavascript.net/14_event.html)
+- [Philip Roberts: What the heck is the event loop anyway?](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
+
