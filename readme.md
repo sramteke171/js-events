@@ -269,7 +269,7 @@ When an event (e.g. click) occurs, all nodes up the DOM tree are notified, begin
 
 For a visual, consider the event propagation flow phase illustration below.
 
-![Event Propagation Flow Chart (from World Wide Web Consortium)](event-propagation.svg)
+![Event Propagation Flow Chart (from World Wide Web Consortium)](./event-propagation.svg)
 
 Going back to our example with the `<nav>` element containing links: Given event propagation, you can put an event listener on the `<nav>` element. When a click event occurs on each child `<a>`, the event will propagate up through all parent elements of that `<a>` element, including the `<nav>` element. Thus, the event listener on the `<nav>` element will be triggered.
 
