@@ -223,9 +223,7 @@ Note that we're passing a *reference* to `getPaid` in to `doWork`.
 
 > 5 minutes exercise. 5 minutes review.
 
-Go to this
-[repository](https://git.generalassemb.ly/ga-wdi-exercises/event-listener-practice)
-and follow the instructions.
+Go to this [repository](https://git.generalassemb.ly/dc-wdi-fundamentals/event-listener-practice) and follow the instructions.
 
 ## Break (10 minutes / 0:55)
 
@@ -233,10 +231,9 @@ and follow the instructions.
 
 10 min practice / 5 min review
 
-> We will build on the Color Scheme Switcher as we work through the following
-> sections of the lesson.
+> We will build on the Color Scheme Switcher as we work through the following sections of the lesson.
 
-Visit this [repository](https://git.generalassemb.ly/ga-wdi-exercises/color-scheme-switcher) and follow along!
+Visit this [repository](https://git.generalassemb.ly/dc-wdi-fundamentals/color-scheme-switcher) and follow along!
 
 ## The Event Object (10 min / 1:20)
 
@@ -355,11 +352,9 @@ just one event listener.
 
 ## We Do: DOTS: The Game (25 minutes / 2:30)
 
-Visit this
-[repository](https://git.generalassemb.ly/ga-wdi-exercises/event-listener-demo)
-and follow the instructions.
+Visit this [repository](https://git.generalassemb.ly/dc-wdi-fundamentals/event-listener-demo) and follow the instructions.
 
-## Homework: [Pixart](https://git.generalassemb.ly/ga-wdi-exercises/pixart_js)
+## Homework: [Pixart](https://git.generalassemb.ly/dc-wdi-fundamentals/js-pixart)
 
 ## Additional Reading
 
