@@ -1,27 +1,37 @@
-# Events and Callbacks
+[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
-## Learning Objectives
+# JavaScript Events
 
-### Events
+So far, we have needed to use the REPL in the browser console to interact with
+our programs. This is asking a bit much of our users! Instead, we would like
+build applications that respond to user interactions.
+
+## Prerequisites
+
+* HTML, CSS, and JavaScript
+* Working with the DOM
+
+## Objectives
+
+By the end of this, developers should be able to:
 
 * Explain event-driven development
-* Understand the different types of events we can work with in JS
+* Understand the different types of events we can work with in JavaScript
 * Setup an event listener and an event handler
 * Use the event object
 
-### Callbacks
+## Introduction
 
-* Explain the concept of a "callback" and how we can pass functions as arguments
-  to other functions
-* Explain why callbacks are important to asynchronous program flow
-* Pass a named function as a callback to another function
-* Pass an anonymous function as a callback to another function
+So far, the only way we've been able to interact with the applications we've
+built so far is through the REPL in the browser. It's too much for us to ask our
+users to do the same! So, instead, we want to build applications that respond to
+our user's input: a user clicks a button, triggering an action in our
+application.
 
-## Framing (5 minutes / 0:05)
-
-So far, we have needed to use the REPL in the browser console to interact with
-our programs. This is asking a bit much of our users. Instead we would like to
-write code to respond to user interactions with the webpage.
+We've learned HTML and CSS, the tools we need to built out the interface; we've
+also learned JavaScript, the programming language we can use to built programs;
+now, we need to bring the two together and build interfaces (using HTML and CSS)
+with functionality our users can leverage (using JavaScript).
 
 The **DOM** not only lets us manipulate the document (or webpage) using
 JavaScript, but also gives us the ability to write JavaScript that responds to
@@ -30,63 +40,86 @@ interactions with the page. These interactions are communicated as **events**.
 We can **listen** for certain kinds of user-driven events, such as clicking a
 button, entering data into a form, keypresses and many, many more.
 
-## Events (5 minutes / 0:10)
+## Events
+
+**Discussion Questions:**
 
 * In plain English, what is an event?
 * What might an event in the context of a web page be?
-* What are some specific examples of common DOM events?
+* What are some specific examples of common DOM events? (What DOM events did you
+    learn in the pre-work?)
 
-> You can find information on events and examples at [W3Schools
-> Events](https://www.w3schools.com/js/js_events.asp), [W3Schools DOM
-> Events](https://www.w3schools.com/js/js_htmldom_events.asp), and [Mozilla
+> You can find information on events and examples at the [Mozilla
 > Developer Network](https://developer.mozilla.org/en-US/docs/Web/Events).
-> Note: W3 schools introduces events with JavaScript written into attributes. We
-
-Instead will prefer to keep JavaScript out of HTML files and use JS to target
-elements from the DOM and attach [event listeners](https://www.w3schools.com/js/js_htmldom_eventlistener.asp).
 
 "DOM Events are sent to notify code of interesting things that have taken
 place." _- MDN_
 
 For the time being, when we talk about "interesting things that have taken
-place" we are talking about user interactions with the page.
+place" we are talking about user interactions with the page. In the context of
+JavaScript and building web pages, we are talking about getting listening for
+events on DOM elements and triggering some action in response to those events.
 
-### Types of Events (5 minutes / 0:15)
+In code, it looks like this:
 
+```js
+const button = document.querySelector('.js-button')
+
+button.addEventListener('click', function () {
+  alert("You clicked a button!")
+})
+```
+
+### Turn & Talk (5 min)
+
+Turn to your neighbor or the people in your row and discuss what is happening in
+the code snippet abote.
+
+> We'll work through each part of the above snippet in detail as we work through
+> the rest of the lesson. In a few minutes, you'll be working with events on your
+> own!
+
+## Types of Events
+
+Let's start by answering the question, "What kinds of events can we respond to?"
 There are many events that we can listen for and respond to in JavaScript.
 Broadly speaking, we can divide these events in to four categories:
 
-#### Document / Window Events
+### 1. Document / Window Events
 
 * load
 * resize
 * scroll
 * unload
 
-#### Mouse Events
+### 2. Mouse Events
 
 * click
 * dblclick
 * mouseenter
 * mouseleave
 
-#### Key Events
+### 3. Key Events
 
 * keypress
 * keydown
 * keyup
 
-#### Form Events
+### 4. Form Events
 
 * submit
 * change
 * focus
 
-### Setting Up An Event Listener (15 minutes / 0:30)
+## Event Listeners in JavaScript
 
-Now that we have an idea of what DOM events are in theory, let's wire up our
-code and begin interacting with them. There are two steps to working with
-events: (1) Listening for an event and (2) Responding to an event.
+When we want to respond to events in JavaScript, we do so in two parts:
+
+1. We set up an event listener with `.addEventListener`
+1. We define an event handler, a callback function that get's passed to
+   `.addEventListener`
+
+### Event Listener
 
 In order to listen for an event, we need to define an **event listener**. Below
 you'll find a simple event listener associated with a `'click'` event on a
@@ -95,7 +128,7 @@ you'll find a simple event listener associated with a `'click'` event on a
 First we target the button:
 
 <details>
-  <summary>If a button element has a class of 'js-button', how would we capture this from the DOM?</summary>
+  <summary>If a button element has a class of <code>.js-button</code>, how would we capture this from the DOM?</summary>
 
 ```js
 const button = document.querySelector('.js-button')
@@ -110,8 +143,8 @@ Once we have the element from the DOM, we can tell JS to listen for an event:
 
 button.addEventListener('click', handleClickEvent)
 
-// first argument: event
-// second argument: callback function
+// first argument: event, as a string
+// second argument: callback function for our event handler
 ```
 
 That completes step 1 of working with events - we're now listening for a click
@@ -131,6 +164,7 @@ All together, our code looks like this:
 
 ```js
 const button = document.querySelector('.js-button')
+
 button.addEventListener('click', handleClickEvent)
 
 function handleClickEvent(){
@@ -138,24 +172,37 @@ function handleClickEvent(){
 }
 ```
 
-Or we could use an anonymous callback function:
+You will most often see (and probably use) an anonymous callback function for
+your event handler. That looks like this:
 
 ```js
 const button = document.querySelector('.js-button')
+
 button.addEventListener('click', function() {
   console.log('I was clicked!')
 })
 ```
 
-The code above first gets an element from the DOM. It then attaches an event
-listener to that `button` element with the `addEventListener()` method. The
-`addEventListener()` method takes two arguments: (1) the event we want to listen
-for and (2) the function that should be called whenever that event is invoked.
-In the case of the code above, we're saying we want to listen for `click` events
-on our `button`, and whenever someone does click on our button, call the
-`handleClickEvent()` function.
+<details>
+  <summary>What is this code doing?</summary>
 
-## Aside: Callbacks - Calling vs. Referencing (5 minutes / 0:35)
+The code above first gets an element from the DOM. It then attaches an event
+listener to that <code>button</code> element with the
+<code>addEventListener()</code> method. The <code>addEventListener()</code>
+method takes two arguments:
+
+<ol>
+  <li>the event we want to listen for, and</li>
+  <li>the function that should be called whenever that event is invoked.</li>
+</ol>
+
+In the case of the code above, we're saying we want to listen for
+<code>click</code> events on our <code>button</code>, and whenever someone does
+click on our button, call the <code>handleClickEvent()</code> function.
+
+</details>
+
+## Aside: Callbacks
 
 As a quick aside, let's answer the question, "What is a callback function?"
 
@@ -211,34 +258,40 @@ Note that we're passing a *reference* to `getPaid` in to `doWork`.
 
 <details>
   <summary>What is the difference between referencing and invoking a function?</summary>
-  Invoking will actually run the function; referencing is just passing it around inside our program. 
+
+Invoking will actually run the function; referencing is just passing it around
+inside our program as a value.
+
 </details>
 
 <details>
-  <summary>Where does `getPaid` actually get invoked?</summary>
-  It will be invoked inside of `doWork`, at the very end of that functions' process or work. 
+  <summary>Where does <code>getPaid</code> actually get invoked?</summary>
+
+It will be invoked inside of <code>doWork</code>, at the very end of that
+functions' process or work.
+
 </details>
 
-## You Do: Practice (10 minutes / 0:45)
+## We Do: Practice
 
 > 5 minutes exercise. 5 minutes review.
 
 Go to this [repository](https://git.generalassemb.ly/dc-wdi-fundamentals/event-listener-practice) and follow the instructions.
 
-## Break (10 minutes / 0:55)
+## Break
 
-## We Do: Color Scheme Switcher (15 min / 1:10)
+## You Do: Color Scheme Switcher
 
-10 min practice / 5 min review
+> 10 min practice / 5 min review
 
-> We will build on the Color Scheme Switcher as we work through the following sections of the lesson.
+We will build on the Color Scheme Switcher as we work through the following sections of the lesson.
 
 Visit this [repository](https://git.generalassemb.ly/dc-wdi-fundamentals/color-scheme-switcher) and follow along!
 
-## The Event Object (10 min / 1:20)
+## The Event Object
 
-Comment out the code you just did in the Color Scheme Switcher exercise and put
-the following...
+Comment out the code you wrote in the Color Scheme Switcher exercise and paste
+in the following:
 
 ```js
 var buttons = document.querySelector('li a')
@@ -251,46 +304,41 @@ function handleClickEvent (evt) {
 }
 ```
 
-The `evt` stands for `event`.
+> The `evt` stands for `event`. The reason we're not actually using `event` is
+> that it's a "reserved word" in Javascript, like "if" and "return".
 
-> The reason we're not actually using `event` is that it's a "reserved word" in
-> Javascript, like "if" and "return".
+**What do you see in the console when you click the link?**
 
-### Explore The Event Object (5 min / 1:25)
-
-Open up your event listener practice exercise and modify your event handler to
-accept the event object as a parameter. Then print it to the console.
+### Turn & Talk: Explore The Event Object (5 min)
 
 With your partner, spend three minutes clicking the button and exploring what
-properties the event (or `evt`) object contains. Look for...
+properties the event (or `evt`) object contains. Look for:
 
 * A way to figure out what element was clicked on.
 * A way to tell the position of the mouse when it was clicked.
 * One other piece of useful or interesting information.
 
-### Preventing Default Behavior (5 min / 1:30)
+### Preventing Default Behavior
 
 The event object is useful to us as programmers for many reasons - one of those
-reasons is preventing the default browser behavior for a certain event. 
+reasons is preventing the default browser behavior for a certain event.
 
 A very common use case for this is when the user clicks on an anchor element
-(`<a>`) but we want to control what happens in our code, rather than rely on
+(`<a>`), but we want to control what happens in our code, rather than rely on
 what the browser tries to do in response to this event by default (navigate to
 another location).
-
-For example:
 
 To prevent the default behavior, we have a special method inside the event
 object: `preventDefault()`.
 
-* How do we call methods on objects?
+* How do we call methods in objects?
 * How might we then invoke `preventDefault()` to prevent the default browser
   behavior?
 
 <details>
   <summary> Answer </summary>
 
-```js
+<code>
 var button = document.querySelector('.js-button');
 
 button.addEventListener("click", handleClickEvent);
@@ -300,50 +348,99 @@ function handleClickEvent ( evt ){
   console.log("I was clicked!")
   console.log(evt)
 }
-```
+</code>
 
 </details>
 
-### Event Propagation (15 min / 1:45)
+## Event Propagation
 
-Given the following scenario and what we've learned about events so far, what
-would you do?
+Clone down [this
+repository](https://git.generalassemb.ly/dc-wdi-fundamentals/js-event-propagation-practice) for a short exercise.
 
-> You have a `<nav>` element that contains an unordered list with links in the
-> header of your website. This `<nav>` serves as the primary navigation.
-> Whenever the user clicks on one of these links however, you want to run some
-> code and update the page with JavaScript. How would you attach and event to
-> each link in the list?
+The site in the exercise above has 100 buttons. Your task is to make it so an
+alert pops up when the user clicks on any of the buttons.
 
-One way to go about this is to set an individual event listener on each link, as
-we did in the color switcher example above.
+Your first thought might be to do this with a `for` loop - it's certainly one
+way to accomplish the task at hand! Doing it this way looks like this:
 
-Another way to go about this is to take advantage of event propagation. There
-are three phases of **event propagation**: capture phase, target phase, and
-bubbling phase.
+```js
+const buttons = document.querySelectorAll('.js-button')
+
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener('click', function(evt) {
+    evt.preventDefault();
+    alert("You clicked a button!")
+  })
+}
+```
+
+Another way to go about this is to take advantage of **event propagation**. There
+are three phases of event propagation:
+
+1. Capture phase,
+1. Target phase, and
+1. bubbling phase.
 
 When an event (e.g. click) occurs, all nodes up the DOM tree are notified,
 beginning at the window level and working its way down the DOM branch to the
-event target. This is the capture phase. Once the propagation reaches the event
-target, all event listeners on the target will be triggered. Then, event
-propagation continues back up the DOM tree in the event bubbling phase. All
-three of these phases are very nearly instantaneous.
+event target. This is the capture phase.
 
-For a visual, consider the event propagation flow phase illustration below.
+Once the propagation reaches the event target, all event listeners on the target
+will be triggered. This is the target phase.
 
-![Event Propagation Flow Chart (from World Wide Web Consortium)](./event-propagation-flow.png)
+Then, event propagation returns back up the DOM tree in the event bubbling
+phase.
 
-Going back to our example with the `<nav>` element containing links: Given event
-propagation, you can put an event listener on the `<nav>` element. When a click
-event occurs on each child `<a>`, the event will propagate up through all parent
-elements of that `<a>` element, including the `<nav>` element. Thus, the event
-listener on the `<nav>` element will be triggered.
+All three of these phases are very nearly instantaneous.
 
-To trigger specific outcomes for each event target child element, you can use a
-conditional (if/else) or switch statement to invoke the intended function for
-each the event target.
+For a visual, consider the event propagation flow phase illustration below:
 
-### We do: Refactor Color Switcher (10 min / 1:55)
+![Event Propagation Flow Chart (from World Wide Web
+Consortium)](./assets/event-propagation-flow.png)
+
+What does this mean, in plain English? It means that the event will bubble to
+and from the event target, through it's parent elements. So, you can treat
+a click on an element as a click on it's parent, grandparent, great-grandparent,
+etc.
+
+This is usefull for us when working with adding events to a lot of elements
+(like in our exercise). Rather than apply an event listener to every element,
+and have a lot of duplicate event listeners, we can apply 1 event to the parent
+element:
+
+```js
+const controlPanel = document.querySelectorAll('.js-control-panel')
+
+controlPanel.addEventListener('click', function(evt) {
+  evt.preventDefault();
+
+  if (evt.target.tagName === "A") {
+    alert("You clicked a button!")
+  }
+})
+```
+
+<details>
+  <summary>What is this code doing?</summary>
+
+  The code above first gets the <code>.js-control-panel</code> element from the
+  DOM and adds a 'click' event listener to it.
+
+  The event handler first prevents the default browser behavior, which we
+  typically want to do when working with links. Next, the event handler checks
+  the event target to see if it is a link (i.e. is an <code>a</code> tag). If it
+  is, an alert is created with the text "You clicked a button".
+
+</details>
+
+**Let's refactor the [`js-event-propagation`](https://git.generalassemb.ly/dc-wdi-fundamentals/js-event-propagation-practice) exercise from above to use event
+propagation.**
+
+This technique is really helpful when working with a list of links or buttons
+that all perform the same task but with different data. For example,
+[tabs](https://codepen.io/collection/Ctihv/), a common UI element in web pages.
+
+### You do: Refactor Color Switcher (10 min / 1:55)
 
 Let's revisit the color switcher example together and find a way to put have
 just one event listener.
@@ -354,12 +451,16 @@ just one event listener.
 
 Visit this [repository](https://git.generalassemb.ly/dc-wdi-fundamentals/event-listener-demo) and follow the instructions.
 
-## Homework: [Pixart](https://git.generalassemb.ly/dc-wdi-fundamentals/js-pixart)
-
-## Additional Reading
+## Additional Resources
 
 * [Build a Drum Kit in Vanilla JS](https://www.youtube.com/watch?v=VuN8qwZoego)
 * [Event reference](https://developer.mozilla.org/en-US/docs/Web/Events)
 * [Introduction to events](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events)
 * [Eloquent JavaScript: Handling Events](http://eloquentjavascript.net/14_event.html)
 * [Philip Roberts: What the heck is the event loop anyway?](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
+
+## [License](LICENSE)
+
+1. All content is licensed under a CC­BY­NC­SA 4.0 license.
+1. All software code is licensed under GNU GPLv3. For commercial use or
+    alternative licensing, please contact legal@ga.co.
