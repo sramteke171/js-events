@@ -119,7 +119,7 @@ When we want to respond to events in JavaScript, we do so in two parts:
 1. We define an event handler, a callback function that get's passed to
    `.addEventListener`
 
-### Event Listener
+### Step 1: Event Listener
 
 In order to listen for an event, we need to define an **event listener**. Below
 you'll find a simple event listener associated with a `'click'` event on a
@@ -149,6 +149,8 @@ button.addEventListener('click', handleClickEvent)
 
 That completes step 1 of working with events - we're now listening for a click
 event on our button!
+
+### Step 2: Event Handler
 
 For step two, we need to define the function that will be called whenever this
 event is emitted. This is just a function, but it has a special name due to how
@@ -338,7 +340,7 @@ object: `preventDefault()`.
 <details>
   <summary> Answer </summary>
 
-<code>
+```js
 var button = document.querySelector('.js-button');
 
 button.addEventListener("click", handleClickEvent);
@@ -348,7 +350,7 @@ function handleClickEvent ( evt ){
   console.log("I was clicked!")
   console.log(evt)
 }
-</code>
+```
 
 </details>
 
@@ -379,7 +381,7 @@ are three phases of event propagation:
 
 1. Capture phase,
 1. Target phase, and
-1. bubbling phase.
+1. Bubbling phase.
 
 When an event (e.g. click) occurs, all nodes up the DOM tree are notified,
 beginning at the window level and working its way down the DOM branch to the
@@ -440,14 +442,14 @@ This technique is really helpful when working with a list of links or buttons
 that all perform the same task but with different data. For example,
 [tabs](https://codepen.io/collection/Ctihv/), a common UI element in web pages.
 
-### You do: Refactor Color Switcher (10 min / 1:55)
+## You do: Refactor Color Switcher
 
 Let's revisit the color switcher example together and find a way to put have
 just one event listener.
 
-## Break (10 minutes / 2:05)
+## Break
 
-## We Do: DOTS: The Game (25 minutes / 2:30)
+## We Do: DOTS: The Game
 
 Visit this [repository](https://git.generalassemb.ly/dc-wdi-fundamentals/event-listener-demo) and follow the instructions.
 
