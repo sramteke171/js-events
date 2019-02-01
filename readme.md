@@ -16,9 +16,9 @@ build applications that respond to user interactions.
 By the end of this, developers should be able to:
 
 * Explain event-driven development
-* Understand the different types of events we can work with in JavaScript
-* Setup an event listener and an event handler
-* Use the event object
+* Discover some of the different types of events we can work with in JavaScript
+* Define Event Listeners and Event Handlers
+* Understand the event object
 
 ## Introduction
 
