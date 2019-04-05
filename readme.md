@@ -29,13 +29,13 @@ our user's input: a user clicks a button, triggering an action in our
 application.
 
 We've learned HTML and CSS, the tools we need to built out the interface; we've
-also learned JavaScript, the programming language we can use to built programs;
+also learned JavaScript, the programming language we can use to build programs;
 now, we need to bring the two together and build interfaces (using HTML and CSS)
 with functionality our users can leverage (using JavaScript).
 
 The **DOM** not only lets us manipulate the document (or webpage) using
 JavaScript, but also gives us the ability to write JavaScript that responds to
-interactions with the page. These interactions are communicated as **events**.
+interactions within the page. These interactions are communicated as **events**.
 
 We can **listen** for certain kinds of user-driven events, such as clicking a
 button, entering data into a form, keypresses and many, many more.
@@ -57,7 +57,7 @@ place." _- MDN_
 
 For the time being, when we talk about "interesting things that have taken
 place" we are talking about user interactions with the page. In the context of
-JavaScript and building web pages, we are talking about getting listening for
+JavaScript and building web pages, we are talking about listening for
 events on DOM elements and triggering some action in response to those events.
 
 In code, it looks like this:
@@ -73,7 +73,7 @@ button.addEventListener('click', function () {
 ### Turn & Talk (5 min)
 
 Turn to your neighbor or the people in your row and discuss what is happening in
-the code snippet abote.
+the code snippet above.
 
 > We'll work through each part of the above snippet in detail as we work through
 > the rest of the lesson. In a few minutes, you'll be working with events on your
@@ -449,7 +449,7 @@ just one event listener.
 
 ## Break
 
-## We Do: DOTS: The Game
+## You Do: DOTS: The Game
 
 Visit this [repository](https://git.generalassemb.ly/dc-wdi-fundamentals/event-listener-demo) and follow the instructions.
 
