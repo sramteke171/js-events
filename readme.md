@@ -296,9 +296,9 @@ Comment out the code you wrote in the Color Scheme Switcher exercise and paste
 in the following:
 
 ```js
-var buttons = document.querySelector('li a')
+var redButton = document.querySelector('.red')
 
-buttons.addEventListener('click', handleClickEvent)
+redButton.addEventListener('click', handleClickEvent)
 
 function handleClickEvent (evt) {
 	console.log('I was clicked!')
@@ -405,13 +405,13 @@ and from the event target, through it's parent elements. So, you can treat
 a click on an element as a click on it's parent, grandparent, great-grandparent,
 etc.
 
-This is usefull for us when working with adding events to a lot of elements
+This is useful for us when working with adding events to a lot of elements
 (like in our exercise). Rather than apply an event listener to every element,
 and have a lot of duplicate event listeners, we can apply 1 event to the parent
 element:
 
 ```js
-const controlPanel = document.querySelectorAll('.js-control-panel')
+const controlPanel = document.querySelector('.js-control-panel')
 
 controlPanel.addEventListener('click', function(evt) {
   evt.preventDefault();
