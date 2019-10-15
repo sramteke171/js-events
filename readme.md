@@ -192,9 +192,7 @@ click on our button, call the <code>handleClickEvent()</code> function.
 
 </details>
 
-## We Do: Practice
-
-> 5 minutes exercise. 5 minutes review.
+## I Do: Practice
 
 Go to this
 [repository](https://git.generalassemb.ly/dc-wdi-fundamentals/event-listener-practice)
@@ -202,20 +200,12 @@ and follow the instructions.
 
 ## You Do: Color Scheme Switcher
 
-> 10 min practice / 5 min review
-
 We will build on the Color Scheme Switcher as we work through the following
 sections of the lesson.
 
 Visit this
 [repository](https://git.generalassemb.ly/dc-wdi-fundamentals/color-scheme-switcher)
 and follow along!
-
-## You Do: DOTS: The Game
-
-Visit this
-[repository](https://git.generalassemb.ly/dc-wdi-fundamentals/event-listener-demo)
-and follow the instructions.
 
 ## Additional Resources
 
