@@ -200,8 +200,6 @@ Go to this
 [repository](https://git.generalassemb.ly/dc-wdi-fundamentals/event-listener-practice)
 and follow the instructions.
 
-## Break
-
 ## You Do: Color Scheme Switcher
 
 > 10 min practice / 5 min review
