@@ -63,15 +63,6 @@ button.addEventListener("click", function() {
 });
 ```
 
-### Turn & Talk (5 min)
-
-Turn to your neighbor or the people in your row and discuss what is happening in
-the code snippet above.
-
-> We'll work through each part of the above snippet in detail as we work through
-> the rest of the lesson. In a few minutes, you'll be working with events on
-> your own!
-
 ## Types of Events
 
 Let's start by answering the question, "What kinds of events can we respond to?"
