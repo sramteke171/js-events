@@ -2,26 +2,6 @@
 
 # JavaScript Events
 
-So far, we have needed to use the REPL in the browser console to interact with
-our programs. This is asking a bit much of our users! Instead, we would like
-build applications that respond to user interactions.
-
-## Prerequisites
-
-- HTML, CSS, and JavaScript
-- Working with the DOM
-
-## Objectives
-
-By the end of this, developers should be able to:
-
-- Explain event-driven development
-- Discover some of the different types of events we can work with in JavaScript
-- Define Event Listeners and Event Handlers
-- Understand the event object
-
-## Introduction
-
 So far, the only way we've been able to interact with the applications we've
 built so far is through the REPL in the browser. It's too much for us to ask our
 users to do the same! So, instead, we want to build applications that respond to
@@ -39,6 +19,20 @@ interactions within the page. These interactions are communicated as **events**.
 
 We can **listen** for certain kinds of user-driven events, such as clicking a
 button, entering data into a form, keypresses and many, many more.
+
+## Prerequisites
+
+- HTML, CSS, and JavaScript
+- The DOM & DOM Selectors
+
+## Objectives
+
+By the end of this, developers should be able to:
+
+- Explain event-driven development
+- Discover some of the different types of events we can work with in JavaScript
+- Define Event Listeners and Event Handlers
+- Understand the event object
 
 ## Events
 
