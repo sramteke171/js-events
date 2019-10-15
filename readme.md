@@ -32,7 +32,6 @@ By the end of this, developers should be able to:
 - Explain event-driven development
 - Discover some of the different types of events we can work with in JavaScript
 - Define Event Listeners and Event Handlers
-- Understand the event object
 
 ## Events
 
