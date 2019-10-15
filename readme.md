@@ -200,9 +200,6 @@ and follow the instructions.
 
 ## You Do: Color Scheme Switcher
 
-We will build on the Color Scheme Switcher as we work through the following
-sections of the lesson.
-
 Visit this
 [repository](https://git.generalassemb.ly/dc-wdi-fundamentals/color-scheme-switcher)
 and follow along!
