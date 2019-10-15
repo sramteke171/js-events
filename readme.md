@@ -33,7 +33,7 @@ By the end of this, developers should be able to:
 - Discover some of the different types of events we can work with in JavaScript
 - Define Event Listeners and Event Handlers
 
-## Events
+## Events (5 min / 0:10)
 
 **Discussion Questions:**
 
@@ -67,7 +67,7 @@ button.addEventListener("click", function() {
 > the rest of the lesson. In a few minutes, you'll be working with events on
 > your own!
 
-## Types of Events
+## Types of Events (5 min / 0:15)
 
 Let's start by answering the question, "What kinds of events can we respond to?"
 There are many events that we can listen for and respond to in JavaScript.
@@ -99,7 +99,7 @@ Broadly speaking, we can divide these events in to four categories:
 - change
 - focus
 
-## Event Listeners in JavaScript
+## Event Listeners in JavaScript (15 min / 0:30)
 
 When we want to respond to events in JavaScript, we do so in two parts:
 
@@ -192,13 +192,13 @@ click on our button, call the <code>handleClickEvent()</code> function.
 
 </details>
 
-## I Do: Practice
+## I Do: Practice (10 min / 0:40)
 
 Go to this
 [repository](https://git.generalassemb.ly/dc-wdi-fundamentals/event-listener-practice)
 and follow the instructions.
 
-## You Do: Color Scheme Switcher
+## You Do: Color Scheme Switcher (15 min / 0:55)
 
 Visit this
 [repository](https://git.generalassemb.ly/dc-wdi-fundamentals/color-scheme-switcher)
