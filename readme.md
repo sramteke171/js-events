@@ -204,6 +204,10 @@ Go to this
 [repository](https://git.generalassemb.ly/dc-wdi-fundamentals/color-scheme-switcher)
 and follow the instructions.
 
+## [The Event Object (30 min)](https://git.generalassemb.ly/dc-wdi-fundamentals/the-event-object)
+
+## [Bonus: Event Propogation](https://git.generalassemb.ly/dc-wdi-fundamentals/event-propogation)
+
 ## Additional Resources
 
 - [Build a Drum Kit in Vanilla JS](https://www.youtube.com/watch?v=VuN8qwZoego)
