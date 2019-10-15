@@ -196,13 +196,13 @@ click on our button, call the <code>handleClickEvent()</code> function.
 
 Go to this
 [repository](https://git.generalassemb.ly/dc-wdi-fundamentals/event-listener-practice)
-and follow the instructions.
+and follow along.
 
 ## You Do: Color Scheme Switcher (15 min / 0:55)
 
-Visit this
+Go to this
 [repository](https://git.generalassemb.ly/dc-wdi-fundamentals/color-scheme-switcher)
-and follow along!
+and follow the instructions.
 
 ## Additional Resources
 
