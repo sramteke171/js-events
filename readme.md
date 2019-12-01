@@ -204,9 +204,9 @@ Go to this
 [repository](https://git.generalassemb.ly/seir-1118/color-scheme-switcher)
 and follow the instructions.
 
-## [The Event Object (30 min)](https://git.generalassemb.ly/dc-wdi-fundamentals/the-event-object)
+## [The Event Object (30 min)](https://git.generalassemb.ly/seir-1118/the-event-object)
 
-## [Bonus: Event Propogation](https://git.generalassemb.ly/dc-wdi-fundamentals/event-propogation)
+## [Bonus: Event Propogation](https://git.generalassemb.ly/seir-1118/event-propogation)
 
 ## Additional Resources
 
