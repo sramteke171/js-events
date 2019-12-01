@@ -201,7 +201,7 @@ and follow along.
 ## You Do: Color Scheme Switcher (15 min / 0:55)
 
 Go to this
-[repository](https://git.generalassemb.ly/dc-wdi-fundamentals/color-scheme-switcher)
+[repository](https://git.generalassemb.ly/seir-1118/color-scheme-switcher)
 and follow the instructions.
 
 ## [The Event Object (30 min)](https://git.generalassemb.ly/dc-wdi-fundamentals/the-event-object)
