@@ -204,7 +204,7 @@ Go to this
 [repository](https://git.generalassemb.ly/seir-1118/color-scheme-switcher)
 and follow the instructions.
 
-## [Event Propogation](https://git.generalassemb.ly/jdr-0127/js-event-propagation-practice)
+## [Event Propagation](https://git.generalassemb.ly/jdr-0127/js-event-propagation-practice)
 
 ## Additional Resources
 
