@@ -195,16 +195,16 @@ click on our button, call the <code>handleClickEvent()</code> function.
 ## I Do: Practice (10 min / 0:40)
 
 Go to this
-[repository](https://git.generalassemb.ly/seir-1118/event-listener-practice)
+[repository](https://git.generalassemb.ly/jdr-0622/event-listener-practice)
 and follow along.
 
 ## You Do: Color Scheme Switcher (15 min / 0:55)
 
 Go to this
-[repository](https://git.generalassemb.ly/seir-1118/color-scheme-switcher)
+[repository](https://git.generalassemb.ly/jdr-0622/color-scheme-switcher)
 and follow the instructions.
 
-## [Event Propagation](https://git.generalassemb.ly/jdr-0127/js-event-propagation-practice)
+## [Event Propagation](https://git.generalassemb.ly/jdr-0622/js-event-propagation-practice)
 
 ## Additional Resources
 
